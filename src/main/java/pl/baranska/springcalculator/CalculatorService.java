@@ -1,8 +1,11 @@
 package pl.baranska.springcalculator;
 
+import org.springframework.stereotype.Service;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Service //singleton
 public class CalculatorService {
     public double calculate(String sentValue){
         Pattern pattetn = Pattern.compile("(\\d+)(\\D+)(\\d+)");
